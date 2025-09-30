@@ -31,13 +31,15 @@ int main(int argc, char *argv[]){
 	else {printf("Erreur de parametres");}
 	return 0;
 }
-if (strcmp(argv[1], "add") == 0) {
-    // ...
-}
 else if (strcmp(argv[1], "car") == 0) {
+    if (argc != 3) {
+        printf("Usage: calculator car <number>\n");
+        return 1;
+    }
     int a = atoi(argv[2]);
     printf("%d\n", car(a));
-}  
+}
+
 
 
 		
